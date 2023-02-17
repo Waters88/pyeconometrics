@@ -264,7 +264,7 @@ class RandomEffectsPanelModel(PanelBaseModel):
         self.final_ll = None
         self.converged = None
 
-    def response_function(self, X, beta, mu):
+    def response_function(self, X, beta, mu=0):
         A = X.copy()
         try:
             A.drop(self.output, axis=1, inplace=True)
